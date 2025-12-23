@@ -2,6 +2,16 @@
     font-family: neu;
     src: url('./NeueHaasDisplayMediu.ttf');
 }
+@font-face{
+    font-family: neu;
+    font-weight: 100;
+    src: url('./NeueHaasDisplayXThin.ttf');
+}
+@font-face{
+    font-family: neu;
+    font-weight: 200;
+    src: url('./NeueHaasDisplayRoman.ttf');
+}
 
 *{
     margin: 0;
@@ -185,6 +195,7 @@ nav{
     width: 100%;
     background-color: #EFEAE3;
     margin-top: 8vw;
+    position: relative;
 }
 #moving-text{
     overflow-x: auto;
@@ -223,4 +234,76 @@ nav{
     to{
         transform: translateX(-100%);
     }
+}
+
+#page2-bottom{
+    height: 80vh;
+    width: 100%;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.5vw;
+    
+}
+
+#page2-bottom h1{
+    font-size: 4vw;
+    width: 60%;
+    line-height: 4vw;
+    position: relative;
+    z-index: 11;
+}
+
+#bottom-part2{
+    width: 20%;
+    /* background-color: aqua; */
+}
+
+#bottom-part2 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+#bottom-part2 p{
+font-weight: 200;
+margin-top: 2vw;
+}
+
+
+#page-2 #goeey{
+    height: 32vw;
+    width: 32vw;
+    border-radius: 50%;
+    position: absolute;
+    background: linear-gradient(to top right,#FE320A,#ff671b);
+    left: 25%;
+    top: 58%;
+    filter: blur(20px);
+
+    animation-name: goeey;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes goeey {
+    from
+    {
+        filter: blur(20px);
+        transform: translate(10%,-10%) skew(0);
+    }
+    to{
+        filter: blur(30px);
+        transform: translate(-10%,10%) skew(-12deg );
+    }    
+}
+
+#page-3{
+    height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+
 }
