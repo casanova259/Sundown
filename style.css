@@ -15,6 +15,10 @@ html,body{
     width: 100%;
 }
 
+#main{
+ background-color: #EFEAE3;
+}
+
 .page1{
     min-height: 100vh;
     width: 100%;
@@ -105,5 +109,118 @@ nav{
     width: 100%;
     border-radius:30px;
     margin-top: 5vw;
+    position: relative;
+    z-index: 1;
+}
 
+#hero-shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    background-color: #FE380D;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius:50% ;
+    right:0;
+    top: 70vh;
+    filter: blur(20px);
+}
+
+#hero-1{
+    background-color: #FE380D;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+
+}
+#hero-2{
+    background: linear-gradient(#FE380D,#fe650d);
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+#hero-3{
+    background: linear-gradient(#FE380D,#fe650d);
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime1{
+    from{
+        transform: translate(55%,-2%);
+    }
+    to{
+        transform: translate(-10%,10%);
+    }
+}
+@keyframes anime2{
+    from{
+        transform: translate(5%,-5%);
+    }
+    to{
+        transform: translate(-20%,30%);
+    }
+}
+
+
+#page-2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    margin-top: 8vw;
+}
+#moving-text{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#moving-text h1{
+    display: inline-block;
+    font-size: 9vw;
+}
+#gola{
+    /* color: #FE380D; */
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #FE320A;
+    margin: 1vw 2vw;
+}
+
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
 }
