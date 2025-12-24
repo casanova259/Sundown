@@ -367,7 +367,7 @@ nav h3 {
   display: flex;
   align-items: center;
   gap: 0.5vw;
-  padding: 2vw 6vw 0px;
+  padding: 0vw 6vw 0px;
   justify-content: flex-start;
   padding-bottom: 6vw;
 }
